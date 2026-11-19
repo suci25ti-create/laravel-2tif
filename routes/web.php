@@ -7,9 +7,9 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PelangganController;
 use App\Http\Controllers\UserController;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 Route::get('/home', [HomeController::class, 'index']);
 
@@ -17,7 +17,7 @@ Route::post('question/store', [QuestionController::class, 'store'])
     ->name('question.store');
 
 //pertemuan 7
-Route::get('dashboard', [DashboardController::class, 'index'])
+Route::get('/', [DashboardController::class, 'index'])
     ->name('dashboard');
 
 Route::resource('pelanggan', PelangganController::class);
